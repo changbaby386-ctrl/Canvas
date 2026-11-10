@@ -68,6 +68,14 @@ fun CavansScreen(name: String, modifier: Modifier = Modifier) {
             delay(50L) // 0.05 秒
             minionsX += 5
             minionsY += 10
+
+            if (CanvasWidth > 0f && CanvasHeight > 0f) {
+                if (minionsX >= CanvasWidth || minionsY >= CanvasHeight) {
+                    minionsX = 0f
+                    minionsY = 0f
+                }
+            }
+
         }
     }
 
